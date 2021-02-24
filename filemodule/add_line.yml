@@ -1,0 +1,11 @@
+---
+- name: Add test to an existing file
+  hosts: all
+  remote_user: parp
+  tasks:
+    - name: Add a Single line of text to file
+      lineinfile:
+        path: /home/parp/user.txt
+        line: This line modified by Ansible
+        state: present
+

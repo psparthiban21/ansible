@@ -1,0 +1,11 @@
+---
+- name: Using file module to ensure SELinux file context
+  hosts: all
+  tasks:
+    - name: SeLinux file conntext set to defaults
+      file:
+        path: /home/parp/user.txt
+        seuser: _default
+        serole: _default
+        setype: _default
+        selevel: _default

@@ -1,0 +1,12 @@
+---
+- name: Using Copy Module
+  hosts: server1
+  tasks:
+    - name: Copy file to remote hosts
+      copy:
+        src: /home/parp/.ssh/id_rsa
+        dest: /home/parp/id_rsa
+        owner: parp
+        group: parp
+        mode: 400
+
