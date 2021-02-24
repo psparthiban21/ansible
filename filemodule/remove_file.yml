@@ -1,0 +1,9 @@
+---
+- name: Use the file module to remove a file
+  hosts: localhost
+  tasks:
+    - name: Remove a file from managed hosts
+      file:
+        path: /home/parp/users.txt
+        state: absent
+

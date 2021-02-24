@@ -1,0 +1,12 @@
+---
+- name: Add block of text to a file
+  hosts: localhost
+  tasks:
+    - name: Add a Block of line to a file
+      blockinfile:
+        path: /home/parp/user.txt
+        block: |
+          This is a Text block line1
+          Test Blockinline line2
+        state: present
+
